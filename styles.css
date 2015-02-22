@@ -5,30 +5,36 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+#container {
+	font-family: Georgia, Helvetica, Verdana;
+	font-size: 11pt;
+}
 #nav {
 	width: 100%;
 	height: 35px;
 	background-color: rgb(128, 211, 247);
 	border-radius: 25px;
 }
-#nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align:right;
-}
-#nav li {
-    float: left;
-}
 #nav a {
     display: block;
     width: 60px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: right;
+    float: right;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 .logo {
 	text-align:left;
 	width:90%;
 	padding: 10px;
+	padding-left:20px;
+	padding-top: 7px;
 	float: left;
+	font-weight:bold;
+	font-style:italic;
+	font-size: 14pt;
 }
 .feed {
 	text-align: center;
@@ -46,4 +52,7 @@ html {
 	border-radius: 25px;
 	background-color: rgb(128, 211, 247);
 	border: 0px;
+	font-family: Georgia, Helvetica, Verdana;
+	font-size: 11pt;
+	font-weight: bold;
 }
