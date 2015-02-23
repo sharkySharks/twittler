@@ -36,6 +36,57 @@ $(document).ready(function(){
     streams.home =[]  
   })
 
+  /*
+
+    while(index >= 0){
+  
+        var tweet = streams.home[index];
+        var $tweet = $('<div></div><br>');
+        var time = tweet.created_at;
+
+      $('.following').append('<a class="'+tweet.user+'">' + tweet.user + '<br><br></a>');
+
+      //$('.'+tweet.user+'').on('click', function(){
+      //  alert('hey');
+     // })
+
+       // $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n (Time: ' + time + ')');
+       // $tweet.appendTo($('.userfeed'));
+        index -= 1;
+
+
+      }
+
+    
+      //$('.userfeed').appendTo();
+*/
+
+for (var i =0; i<users.length; i++) {
+    $('.following').append('<a class="'+users[i]+'">' + users[i] + '<br><br></a>');
+
+    $('.'+users[i]+'').on('click', function(){
+      alert('hey '); 
+      //streams.home[index].message
+
+      while(index >= 0){
+        
+
+        var tweet = streams.home[index];
+        var $tweet = $('<div></div><br>');
+        var time = tweet.created_at;
+        $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n (Time: ' + time + ')');
+        $tweet.appendTo($('.userfeed'));
+        index -= 1;
+
+
+      }
+
+    })
+
+  }
+
+
+
 
 
 });
