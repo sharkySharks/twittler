@@ -11,15 +11,37 @@ $(document).ready(function(){
     var tweet = streams.home[index];
     var $tweet = $('<div></div><br>');
     var time = tweet.created_at;
-    $tweet.text('@' + tweet.user + ': ' + tweet.message + 'Time: ' + time);
+    $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n Time: ' + time);
     $tweet.appendTo($feed);
     index -= 1;
 
+    console.log('tweet.user:   ' + tweet.user + '  message: ' + tweet.message)
+
   }
 
-  var tweet = streams.home[index];
+  streams.home =[] 
 
-  console.log("users: " + users + " streams: " + tweet);
+  $('.tweetButton').on('click', function(){
+    
+      var $feed = $('.feed');
+      var index = streams.home.length - 1;
+      while(index >= 0){
+      var tweet = streams.home[index];
+      var $tweet = $('<div></div><br>');
+      var time = tweet.created_at;
+      $tweet.text('@' + tweet.user + ':      ' + tweet.message + '\n Time: ' + time);
+      
+      $tweet.insertAfter($('.tweetButton'));
+      index -= 1;
+
+    }
+     streams.home =[] 
+    
+  })
+
+  //var tweet = streams.home[index];
+
+  //console.log("users: " + users + " streams: " + tweet);
 
 /*      
 
