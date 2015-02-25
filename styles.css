@@ -36,7 +36,7 @@ html {
 	font-style:italic;
 	font-size: 14pt;
 }
-.feed1 {
+.timelineHeader {
 	text-align: center;
 	width: 500px;
 	margin:auto;
@@ -47,9 +47,16 @@ html {
 	border-radius: 25px;
 	float: left;
 }
-.timelineHeader {
+.feed1 {
 	text-align: center;
-	width: 100%;
+	width: 500px;
+	margin:auto;
+	margin-top:20px;
+	background-color: rgba(67, 146, 199, 0.91);
+	height: 100%;
+	padding: 10px;
+	border-radius: 25px;
+	float: left;
 }
 .feed2 {
 	text-align: center;
