@@ -47,6 +47,10 @@ html {
 	border-radius: 25px;
 	float: left;
 }
+.timelineHeader {
+	text-align: center;
+	width: 100%;
+}
 .feed2 {
 	text-align: center;
 	width: 100%;
@@ -89,6 +93,7 @@ h3 {
 	height: 27px;
 	margin-top:10px;
 	padding-top: 5px;
+	font-weight: bold;
 }
 .userfeed {
 	text-align: center;

@@ -1,7 +1,5 @@
 $(document).ready(function(){
   
-
-
   //var $body = $('body');
   //$body.html('');
   var $feed = $('.feed');
@@ -36,57 +34,34 @@ $(document).ready(function(){
     streams.home =[]  
   })
 
-  /*
 
-    while(index >= 0){
-  
-        var tweet = streams.home[index];
+
+  for (var i =0; i<users.length; i++) {
+    $('.following').append('<a class="'+users[i]+'" data-user="'+users[i]+'">' + users[i] + '<br><br></a>');
+
+    $('.'+users[i]+'').on('click', function(e){
+      console.log('event',e, 'streams.home[e]', streams.home[e]);
+
+      var tweets = streams.users[e.target.dataset.user];
+
+      $('.timelineHeader').empty();
+      $('.feed1').empty();
+      $('<div class="timelineHeader"><h3>'+ tweets[0].user + "'s Timeline</h3><div>").prependTo($('.feed1'));
+
+      for (var i=0; i<tweets.length; i++){
+        var msgs = tweets[i].message;
+        var user = tweets[i].user;
         var $tweet = $('<div></div><br>');
         var time = tweet.created_at;
-
-      $('.following').append('<a class="'+tweet.user+'">' + tweet.user + '<br><br></a>');
-
-      //$('.'+tweet.user+'').on('click', function(){
-      //  alert('hey');
-     // })
-
-       // $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n (Time: ' + time + ')');
-       // $tweet.appendTo($('.userfeed'));
-        index -= 1;
-
-
-      }
-
-    
-      //$('.userfeed').appendTo();
-*/
-
-for (var i =0; i<users.length; i++) {
-    $('.following').append('<a class="'+users[i]+'">' + users[i] + '<br><br></a>');
-
-    $('.'+users[i]+'').on('click', function(){
-      alert('hey '); 
-      //streams.home[index].message
-
-      while(index >= 0){
+        $tweet.text('@' + user + ': ' + msgs + '\n (Time: ' + time + ')');
         
-
-        var tweet = streams.home[index];
-        var $tweet = $('<div></div><br>');
-        var time = tweet.created_at;
-        $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n (Time: ' + time + ')');
-        $tweet.appendTo($('.userfeed'));
-        index -= 1;
-
+        $tweet.appendTo($('.feed1'));
 
       }
 
     })
 
   }
-
-
-
 
 
 });
